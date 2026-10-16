@@ -321,7 +321,7 @@ button { font: inherit; color: inherit; }
   <div class="env-head" id="head">
     <h1>Happy birthday to the sweetest and most loving person in the entire world!</h1>
   </div>
-  <h2 class="env-title" id="cardsTitle">Say hello to your new Lucid.</h2>
+  <h2 class="env-title" id="cardsTitle">Say hello to your new Lucid, and goodbye to gas!</h2>
 
   <div class="env-layer env-back" id="envBack"><div class="liner"></div></div>
   <div class="env-layer env-flap" id="envFlap"><div class="flap" id="flap"><div class="face out"></div><div class="face in"></div></div></div>
@@ -620,7 +620,8 @@ button { font: inherit; color: inherit; }
     W = stage.clientWidth; H = stage.clientHeight;
     ew = Math.min(560, W * 0.84, (H * 0.5) / 0.66); eh = ew * 0.66;
     var cols = W >= 820 ? 3 : 2, rows = Math.ceil(CARDS.length / cols), gap = W >= 820 ? 26 : 12;
-    var regionTop = H * 0.15, regionH = H * 0.6;
+    // Cards start below the title (which can wrap to two lines on phones).
+    var regionTop = Math.max(H * 0.15, cardsTitle.offsetTop + cardsTitle.offsetHeight + 22), regionH = H * 0.75 - regionTop;
     ch = Math.min(340, (regionH - (rows - 1) * gap) / rows); cw = ch * 0.8;
     var maxW = (W - 32 - (cols - 1) * gap) / cols;
     if (cols === 2) cw = Math.min(maxW, ch * 1.05);   // phones: wider cards so the titles fit
