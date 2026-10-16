@@ -307,7 +307,6 @@ button { font: inherit; color: inherit; }
 
 <section class="envstage" id="stage" aria-label="Gift envelope">
   <div class="env-head" id="head">
-    <p class="for" id="forLine">Happy Birthday, Abeer</p>
     <h1><span class="line">You move through the world with taste.</span> <span class="line">You should have something that moves with you.</span></h1>
   </div>
 
@@ -316,7 +315,7 @@ button { font: inherit; color: inherit; }
   <div id="cards"></div>
   <div class="env-layer env-pocket" id="envPocket">
     <i class="side-l"></i><i class="side-r"></i><i class="bottom"></i>
-    <div class="env-label"><span class="to" id="labelTo">For Abeer, my love</span><span class="sub">Happy Birthday</span></div>
+    <div class="env-label"><span class="to" id="labelTo">For Abeer, my love</span><span class="sub">A little gift for you</span></div>
   </div>
   <div class="env-layer env-seal" id="envSeal"><div class="seal" id="seal"><div class="half l"></div><div class="half r"></div></div></div>
   <button class="env-hit" id="envHit" type="button" aria-label="Break the seal and open the envelope"></button>
@@ -564,7 +563,6 @@ button { font: inherit; color: inherit; }
     var raw = decodeURIComponent((location.hash || '').slice(1)).replace(/[_.~-]+/g, ' ').replace(/[^A-Za-zÀ-ɏ ]/g, '').trim();
     if (raw && raw.length <= 30) name = raw;
   } catch (e) {}
-  $('forLine').textContent = 'Happy Birthday, ' + name;
   $('labelTo').textContent = 'For ' + name + ', my love';
   $('finaleFor').textContent = 'Happy Birthday, ' + name;
   CARDS[0].k = 'Surprise, ' + name;
