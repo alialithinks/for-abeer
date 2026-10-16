@@ -629,7 +629,7 @@ button { font: inherit; color: inherit; }
     stage.style.setProperty('--cw', cw + 'px'); stage.style.setProperty('--ch', ch + 'px');
     sIn = Math.min(ew * 0.82 / cw, eh * 0.86 / ch);
     // Closed view: centre the headline and the envelope together as one group, with a short gap between them.
-    var headGap = Math.max(24, Math.min(44, H * 0.045));
+    var headGap = Math.max(24, Math.min(44, H * 0.045)) + 80;
     var headH = head.offsetHeight;
     var groupTop = Math.max(24, (H - (headH + headGap + eh)) / 2);
     head.style.top = groupTop + 'px';
